@@ -16,7 +16,7 @@ const NavbarLink = ({ icon: Icon, label, active, onClick, isOpen }) => {
   return (
     <button
       onClick={onClick}
-      className={`relative flex items-center gap-3 p-3 w-full rounded-lg transition-all group ${
+      className={`relative flex items-center justify-center gap-3 p-3 w-full rounded-lg transition-all group ${
         active ? "bg-primary text-white flex items-center justify-center" : ""
       }`}
     >
@@ -50,14 +50,14 @@ const Navbar = () => {
     >
       {/* Toggle Button */}
       <button
-        className="p-0 rounded-lg hover:bg-base-100 transition absolute top-14 right-0"
+        className="p-0 rounded-lg hover:bg-base-100 transition absolute top-14 right-3"
         onClick={() => setIsOpen(!isOpen)}
       >
         <IconMenu2 size={24} stroke={1.5} />
       </button>
 
       {/* Navigation Links */}
-      <div className="flex flex-col gap-2 mt-20">
+      <div className="flex flex-col items-center justify-center gap-2 mt-20">
         {links.map((link, index) => (
           <NavbarLink
             key={link.label}
@@ -70,7 +70,7 @@ const Navbar = () => {
       </div>
 
       {/* Bottom Links */}
-      <div className="flex flex-col gap-2 mt-20">
+      <div className="flex flex-col items-center justify-center gap-2 mt-20">
         <NavbarLink
           icon={IconSwitchHorizontal}
           label="Change account"
