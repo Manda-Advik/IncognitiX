@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // Dark Mode Toggle Component
 function DarkModeToggle() {
@@ -17,12 +18,12 @@ function DarkModeToggle() {
 
   useEffect(() => {
     // Apply dark mode class to html element
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("darkMode", "true");
-    } else {
+    if (document.documentElement.classList.contains("dark")) {
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("darkMode", "false");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     }
   }, [darkMode]);
 
@@ -385,9 +386,10 @@ export function SocialNavbar() {
             <SearchBar />
           </div>
 
-          <a
-            href="#"
+          <Link
+            to="/"
             className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            onClick={toggleMenu}
           >
             <svg
               className="h-6 w-6 mr-3"
@@ -403,11 +405,12 @@ export function SocialNavbar() {
               />
             </svg>
             Home
-          </a>
+          </Link>
 
-          <a
-            href="#"
+          <Link
+            to="/explore"
             className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            onClick={toggleMenu}
           >
             <svg
               className="h-6 w-6 mr-3"
@@ -423,11 +426,12 @@ export function SocialNavbar() {
               />
             </svg>
             Explore
-          </a>
+          </Link>
 
-          <a
-            href="#"
+          <Link
+            to="/create"
             className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            onClick={toggleMenu}
           >
             <svg
               className="h-6 w-6 mr-3"
@@ -443,11 +447,12 @@ export function SocialNavbar() {
               />
             </svg>
             Create Post
-          </a>
+          </Link>
 
-          <a
-            href="#"
+          <Link
+            to="/messages"
             className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            onClick={toggleMenu}
           >
             <svg
               className="h-6 w-6 mr-3"
@@ -466,11 +471,12 @@ export function SocialNavbar() {
             <span className="ml-1 bg-red-500 text-white rounded-full text-xs px-1.5">
               3
             </span>
-          </a>
+          </Link>
 
-          <a
-            href="#"
+          <Link
+            to="/notifications"
             className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            onClick={toggleMenu}
           >
             <svg
               className="h-6 w-6 mr-3"
@@ -489,11 +495,12 @@ export function SocialNavbar() {
             <span className="ml-1 bg-red-500 text-white rounded-full text-xs px-1.5">
               12
             </span>
-          </a>
+          </Link>
 
-          <a
-            href="#"
+          <Link
+            to="/profile"
             className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            onClick={toggleMenu}
           >
             <img
               src="https://via.placeholder.com/40"
@@ -501,7 +508,7 @@ export function SocialNavbar() {
               className="w-6 h-6 rounded-full mr-3"
             />
             Profile
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
