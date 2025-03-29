@@ -45,7 +45,7 @@ const Navbar = () => {
   return (
     <nav
       className={`bg-base-200 h-screen p-4 flex flex-col justify-between sticky top-0 transition-all duration-300 ${
-        isOpen ? "w-64" : "w-12"
+        isOpen ? "w-64" : "w-18"
       }`}
     >
       {/* Toggle Button */}
