@@ -22,15 +22,6 @@ function App() {
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
-      <div className="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
-        <SocialNavbar />
-        <main className="p-4">
-          <h1 className="text-2xl font-bold">Welcome to IncognitiX</h1>
-          <p className="text-gray-700 dark:text-gray-300">
-            An anonymous social media platform.
-          </p>
-        </main>
-      </div>
     </Router>
   );
 }
