@@ -20,7 +20,7 @@ const NavbarLink = ({ icon: Icon, label, active, onClick, isOpen }) => {
         active ? "bg-primary text-white flex items-center justify-center" : ""
       }`}
     >
-      <div className="w-5 h-5 flex items-center justify-center rounded-lg group-hover:bg-base-300 transition">
+      <div className="w-5 h-3 flex items-center justify-center rounded-lg group-hover:bg-base-300 transition">
         <Icon size={24} stroke={1.5} />
       </div>
       {isOpen && <span>{label}</span>}
