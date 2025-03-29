@@ -1,5 +1,4 @@
 import React from "react";
-import { SocialNavbar } from "./components/SocialNavbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Explore from "./pages/Explore";
@@ -12,7 +11,6 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-base-200">
-        <SocialNavbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/explore" element={<Explore />} />
