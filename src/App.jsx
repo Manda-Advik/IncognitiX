@@ -7,6 +7,7 @@ import CreatePost from "./pages/CreatePost";
 import Messages from "./pages/Messages";
 import Notifications from "./pages/Notifications";
 import Profile from "./pages/Profile";
+import "./index.css";
 
 function App() {
   return (
