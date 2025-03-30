@@ -2,6 +2,7 @@
 
 ## 📌 Project Overview
 Incognitix is an anonymous social media platform designed for users to explore and share content without revealing their identity.
+A anonymous social media website where users can share their thoughts, confessions, or experiences without revealing their identity. There are no usernames, profiles, or personal details, making it a judgment-free space for open expression.
 
 ## 🚀 Features
 - **Home** (🏠) - View general posts and updates.
